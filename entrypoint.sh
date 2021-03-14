@@ -32,6 +32,7 @@ sh -c "git config --global credential.helper cache"
 sh -c "git remote add mirror $*"
 sh -c "echo pushing to $branch branch at $(git remote get-url --push mirror)"
 sh -c "git push mirror $branch"
+sh -c "git push --tags"
 
 sleep $POLL_TIMEOUT
 
